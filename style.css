@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+
 * {
   box-sizing: border-box;
 }
@@ -9,9 +11,13 @@ body {
   width: 100%;
 }
 
-.container {
-  width: 100%;
-  padding: 1rem 0;
+body {
+  background-color: #f6f7f8;
+  font-family: "Noto Sans TC", sans-serif;
+  /* 設定字型 */
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 /* header */
@@ -60,6 +66,11 @@ nav {
 }
 
 /* title */
+.container {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
 .title {
   padding-top: 100px;
   height: 20%;
@@ -95,7 +106,7 @@ option {
 /* goods*/
 .goods {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 0.5rem;
 }
 
@@ -111,7 +122,7 @@ a.tshirt {
 
 .tshirt-img {
   width: 100%;
-  height: 320px;
+  height: 240px;
   display: block;
   background: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14362/t-shirt.png");
   background-size: cover;
@@ -151,6 +162,7 @@ a.tshirt {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .tshirt-name,
@@ -201,15 +213,7 @@ a.tshirt {
 
 /*banner*/
 .banner {
-  padding: 0;
-  margin: 0 auto;
-}
-
-.banner-img {
-  margin-bottom: 0;
-  padding: 0;
-  width: 100%;
-  height: 240px;
+  padding: 2rem 0;
   background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14376/template.png");
   background-size: cover;
   background-position: center;
@@ -219,6 +223,7 @@ a.tshirt {
   align-items: center;
 }
 
+
 .slogan {
   font-size: 1.2rem;
   font-weight: 700;
@@ -226,9 +231,9 @@ a.tshirt {
 }
 
 .signup-form {
-  width: 400px;
-  height: 50px;
-  margin: 1.5rem 0 1rem 0;
+  height: 60px;
+  width: 85%;
+  margin: 1rem 0 0.5rem 0;
   border-radius: 50px;
   display: grid;
   grid-template-columns: 75% 25%;
@@ -239,6 +244,7 @@ a.tshirt {
   outline: none;
   border: none;
   text-align: center;
+  font-size: 1rem;
 }
 
 .signup-button {
@@ -260,6 +266,7 @@ a.tshirt {
 
 /*footer*/
 footer {
+  width: 100%;
   margin-bottom: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -267,11 +274,13 @@ footer {
 
 .right {
   margin: 0;
+  padding: 5px 0;
   text-align: center;
+  font-size: 0.8rem;
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 960px) {
   header {
     grid-template-columns: auto 1fr auto auto auto;
     grid-template-rows: 48px;
@@ -287,7 +296,7 @@ footer {
   .nav-list {
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -302,6 +311,8 @@ footer {
     font-size: 1rem;
     color: black;
     font-weight: 600;
+    text-decoration: none;
+    /* 拿掉底線 */
   }
 
   .search {
@@ -310,5 +321,26 @@ footer {
     /*只有一行也要強調，避免因html中位置較前而單獨成行*/
   }
 
+  /*goods*/
+  .goods {
+    /* 確保螢幕尺寸超過 960 時，依然保持一列 4 個商品 */
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*banner*/
+  .banner {
+    width: 85%;
+
+    margin: 0 auto;
+  }
+
+
+
+}
+
+@media screen and (min-width: 600px) {
+  .signup-form {
+    width: 45%;
+  }
 
 }

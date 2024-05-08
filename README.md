@@ -10,11 +10,15 @@ A simple shopping platform built with HTML and CSS only. No Bootstrap or other l
 </p>
 </div>
 
+## Screenshots  
+<img src="https://i.imgur.com/kSvCuu3.jpg" alt="shopping-platform-large-screen" width="420px">
+<img src="https://i.imgur.com/OzukOKj.jpg" alt="shopping-platform-small-screen" width="200px">
+
 ## :star2: Features
 
 - Redirect to the websites specifc for women, men, or kids<br>
 - View real wear pictures on hovering each item<br>
-- Responsive web design on screen-width greater than 1024px<br>
+- Responsive web design on screen-width greater than 960px<br>
 
 ## :diamond_shape_with_a_dot_inside: Installation
 
